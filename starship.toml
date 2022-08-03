@@ -1,0 +1,95 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = "$all$directory$character"
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+rebase = '[🧱 REBASING](bold yellow)'
+merge = '[🥣 MERGING](bold blue)'
+revert = '[🪀 REVERTING](bold purple)'
+cherry_pick = '[🍒 PICKING](bold red)'
+bisect = '[🗡️ BISECTING](bold white)'
+
+[git_status]
+conflicted = "⚔️"
+ahead = "⬆️${count}"
+behind = "⬇️${count}"
+diverged = "🌵|⬆️${ahead_count}|⬇️{behind_count}"
+up_to_date = "👌"
+untracked = "🐾"
+stashed = "🗃️"
+modified = "📝"
+staged = '[📦\($count\)](green)'
+renamed = "👅"
+deleted = "🗑️"
+
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[python]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
+
+[rust]
+symbol = " "
