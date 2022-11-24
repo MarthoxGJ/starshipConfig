@@ -1,8 +1,11 @@
-"$schema" = 'https://starship.rs/config-schema.json'
-
 add_newline = false
 
-format = "$all$directory$character"
+format = "in $directory$all"
+
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[x](bold red)"
+vicmd_symbol = "[<](bold green)"
 
 [aws]
 symbol = "  "
@@ -20,7 +23,12 @@ symbol = " "
 symbol = " "
 
 [directory]
-read_only = " "
+format = "[$path]($style)[$read_only]($read_only_style) "
+read_only = '[🔒]'
+home_symbol = "🏠"
+truncate_to_repo = true
+truncation_length = 3
+truncation_symbol = ".."
 
 [docker_context]
 symbol = " "
@@ -44,13 +52,13 @@ bisect = '[🗡️ BISECTING](bold white)'
 
 [git_status]
 conflicted = "⚔️"
+diverged = "🌵|⬆️${ahead_count}|⬇️{behind_count}"
 ahead = "⬆️${count}"
 behind = "⬇️${count}"
-diverged = "🌵|⬆️${ahead_count}|⬇️{behind_count}"
 up_to_date = "✅"
 untracked = "🐾"
-stashed = "🗃️"
 modified = "📝"
+stashed = "🗃️"
 staged = '[📦\($count\)](green)'
 renamed = "👅"
 deleted = "🗑️"
